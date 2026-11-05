@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Venue Details</title><link rel="stylesheet" href="venue.css">
+<link rel="stylesheet" href="android.css"><script src="detail.js" defer></script>
+<style data-purpose="custom-background">
+    /* Subtle topographic / wave background overlay lines */
+    .bg-topo-pattern {
+      background-color: #031738;
+      background-image: radial-gradient(circle at 100% 0%, rgba(26, 68, 128, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 0% 50%, rgba(14, 52, 105, 0.3) 0%, transparent 50%);
+    }
+
+    /* Map styling with abstract radar wave lines */
+    .map-canvas-bg {
+      background: radial-gradient(circle at 50% 50%, #eff6ff 0%, #dbeafe 60%, #bfdbfe 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 flex justify-center items-center min-h-screen p-0 sm:p-4 select-none antialiased font-sans" data-screen="venue">
+<!-- BEGIN: MobileDeviceContainer -->
+<!-- Outer shell simulating iPhone device wrapper -->
+<div class="relative w-full max-w-[390px] h-screen sm:h-[844px] bg-topo-pattern overflow-hidden flex flex-col justify-between sm:rounded-[48px] shadow-2xl border-0 sm:border-[8px] sm:border-slate-800">
+<!-- Background Topographic Wave SVG Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<path d="M-50,120 Q120,80 300,160 T600,130" fill="none" stroke="#60a5fa" stroke-width="1.2"></path>
+<path d="M-50,200 Q150,140 280,240 T600,190" fill="none" stroke="#60a5fa" stroke-width="1"></path>
+<path d="M-80,320 Q100,280 260,390 T600,310" fill="none" stroke="#60a5fa" stroke-width="1"></path>
+<path d="M-40,480 Q180,430 320,530 T600,470" fill="none" stroke="#60a5fa" stroke-width="1"></path>
+<path d="M-60,650 Q160,590 350,690 T600,620" fill="none" stroke="#60a5fa" stroke-width="1.2"></path>
+</svg>
+
+<!-- BEGIN: MainContentArea -->
+<main class="relative z-10 flex-1 px-5 pt-1 pb-4 flex flex-col space-y-3.5 overflow-y-auto no-scrollbar">
+<!-- BEGIN: NavigationHeader -->
+<nav aria-label="Top Bar" class="flex items-center justify-between py-1">
+<!-- Back Button -->
+<button aria-label="Go back" class="w-10 h-10 rounded-2xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all backdrop-blur-md flex items-center justify-center text-white border border-white/10" type="button">
+<svg class="w-5 h-5 -ml-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="text-xl font-bold text-white tracking-tight">Venue</h1>
+<!-- Navigation Pin / Compass Action Button -->
+<button aria-label="Open Navigation Directions" class="w-10 h-10 rounded-2xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all backdrop-blur-md flex items-center justify-center border border-white/10 text-[#f59e0b]" type="button">
+<svg class="w-5 h-5 fill-amber-400 rotate-12" viewbox="0 0 24 24">
+<path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+</svg>
+</button>
+</nav>
+<!-- END: NavigationHeader -->
+<!-- BEGIN: VenueBanner -->
+<section class="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-3xl p-5 text-white shadow-lg" data-purpose="venue-title-banner">
+<!-- Event Facility Name -->
+<h2 class="text-[19px] font-extrabold leading-snug tracking-tight text-white mb-3">
+          Dubai International<br/>Convention &amp; Exhibition<br/>Center
+        </h2>
+<!-- Date Badge -->
+<div class="flex items-center space-x-2 text-slate-300 text-xs font-medium">
+<!-- Calendar Icon -->
+<svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span>22 - 23 May 2026</span>
+</div>
+</section>
+<!-- END: VenueBanner -->
+<!-- BEGIN: AddressCard -->
+<section class="bg-white rounded-3xl p-4 shadow-xl flex items-center space-x-3.5" data-purpose="venue-address-card">
+<!-- Pin Icon Bubble -->
+<div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center shrink-0">
+<svg class="w-6 h-6 text-[#0d47a1]" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<!-- Address Text Info -->
+<div class="flex-1 min-w-0 pr-1">
+<p class="text-[11px] font-semibold text-slate-400 tracking-wide mb-0.5">Venue Address</p>
+<p class="text-[13px] font-bold text-[#0c2340] leading-snug">
+            World Trade Centre, Dubai, United Arab Emirates
+          </p>
+</div>
+</section>
+<!-- END: AddressCard -->
+<!-- BEGIN: MapPreviewCard -->
+<section class="relative bg-white rounded-3xl h-44 overflow-hidden shadow-xl border border-white/20" data-purpose="map-preview-card">
+<!-- Abstract Radar Map Background Graphic -->
+<div class="absolute inset-0 map-canvas-bg flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 350 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Intersecting Circular Grid Arcs -->
+<circle cx="175" cy="90" r="130" stroke="#ffffff" stroke-opacity="0.9" stroke-width="2.5"></circle>
+<circle cx="175" cy="90" r="85" stroke="#ffffff" stroke-opacity="0.9" stroke-width="2.5"></circle>
+<circle cx="175" cy="90" r="40" stroke="#ffffff" stroke-opacity="0.9" stroke-width="2"></circle>
+<circle cx="90" cy="50" r="110" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2"></circle>
+<circle cx="260" cy="120" r="120" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2"></circle>
+<!-- Primary Cross Roads Lines -->
+<path d="M-10 110 C 100 110, 240 100, 360 115" stroke="#ffffff" stroke-linecap="round" stroke-width="3"></path>
+<path d="M120 -10 C 110 80, 115 130, 125 190" stroke="#ffffff" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M220 -10 C 235 60, 225 140, 245 190" stroke="#ffffff" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<!-- Map Preview Pill Badge -->
+<div class="absolute top-3.5 left-3.5 z-10">
+<span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-[11px] font-bold text-slate-800 bg-white shadow-sm">
+            Map Preview
+          </span>
+</div>
+<!-- Prominent Golden Pin in Center -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative flex items-center justify-center">
+<!-- Pulsing soft glow circle -->
+<div class="absolute w-16 h-16 bg-amber-400/30 rounded-full blur-[2px]"></div>
+<!-- Amber circular marker badge -->
+<div class="relative w-12 h-12 bg-[#fab847] rounded-full shadow-md flex items-center justify-center">
+<!-- Dark navy inner pin icon -->
+<svg class="w-6 h-6 text-[#091e3e]" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MapPreviewCard -->
+<!-- BEGIN: VenueFacilitiesCard -->
+<section class="bg-white rounded-3xl p-5 shadow-xl" data-purpose="venue-facilities-section">
+<h3 class="text-base font-extrabold text-[#0c2340] mb-3.5 tracking-tight">Venue Facilities</h3>
+<!-- 2x2 Facilities Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Facility Item 1: Free Wi-Fi -->
+<div class="flex items-center space-x-2.5 bg-[#f4f7fa] rounded-2xl px-3.5 py-3">
+<svg class="w-5 h-5 text-[#0d47a1] shrink-0" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4zm0 4.5c2.97 0 5.68 1.13 7.74 3L12 19.25 4.26 11.5A11.75 11.75 0 0 1 12 8.5z"></path>
+</svg>
+<span class="text-xs font-bold text-[#0c2340]">Free Wi-Fi</span>
+</div>
+<!-- Facility Item 2: Parking -->
+<div class="flex items-center space-x-2.5 bg-[#f4f7fa] rounded-2xl px-3.5 py-3">
+<div class="w-5 h-5 flex items-center justify-center shrink-0">
+<span class="text-base font-black text-[#0d47a1] leading-none">P</span>
+</div>
+<span class="text-xs font-bold text-[#0c2340]">Parking</span>
+</div>
+<!-- Facility Item 3: Catering -->
+<div class="flex items-center space-x-2.5 bg-[#f4f7fa] rounded-2xl px-3.5 py-3">
+<!-- Fork & Knife Catering Icon -->
+<svg class="w-5 h-5 text-[#0d47a1] shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M18 2v20M21 2v6a3 3 0 0 1-3 3M18 11v11"></path>
+<path d="M5 2v7a3 3 0 0 0 6 0V2"></path>
+<line x1="8" x2="8" y1="12" y2="22"></line>
+</svg>
+<span class="text-xs font-bold text-[#0c2340]">Catering</span>
+</div>
+<!-- Facility Item 4: Accessible -->
+<div class="flex items-center space-x-2.5 bg-[#f4f7fa] rounded-2xl px-3.5 py-3">
+<!-- Wheelchair Accessibility Icon -->
+<svg class="w-5 h-5 text-[#0d47a1] shrink-0" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-1 6v5.5a1.5 1.5 0 0 0 1.5 1.5H16a1 1 0 1 0 0-2h-3V8a1 1 0 0 0-1-1h-1zm-3.5 1.5A5.5 5.5 0 1 0 13 15h-2a3.5 3.5 0 1 1-3.5-3.5v-2z"></path>
+</svg>
+<span class="text-xs font-bold text-[#0c2340]">Accessible</span>
+</div>
+</div>
+</section>
+<!-- END: VenueFacilitiesCard -->
+</main>
+<!-- END: MainContentArea -->
+
+</div>
+<!-- END: MobileDeviceContainer -->
+</body></html>

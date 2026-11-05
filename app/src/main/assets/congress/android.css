@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("jakarta.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+html { height: 100%; background: #041633; }
+body[data-screen] {
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+body[data-screen] > :first-child {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+[data-screen] .flex-1 { min-height: 0; }
+[data-screen="speakers"] main { min-height: 0; }
+[data-screen] button:focus-visible,
+[data-screen] a:focus-visible { outline: 2px solid #008bf5; outline-offset: 2px; }
+[data-screen] [hidden] { display: none !important; }
+.badge-layout {
+  align-self: center;
+  position: relative;
+  z-index: 20;
+  margin: 0 12px 10px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: #d7eaff;
+  background: #143463;
+  font-size: 12px;
+  font-weight: 600;
+}
+.detail-chip[aria-pressed="true"] {
+  color: white;
+  background: #095ad9;
+  border-color: #095ad9;
+}
+.detail-chip[aria-pressed="false"] {
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.detail-selected { box-shadow: inset 0 0 0 2px #0570e8; }
+.detail-saved { color: #b45309; }
+.detail-empty { padding: 12px 0; color: #475569; font-size: 13px; }
+.detail-status {
+  position: fixed;
+  z-index: 100;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #0c2352;
+  color: white;
+  font-size: 13px;
+  box-shadow: 0 4px 18px #0003;
+}
+@media print {
+  html, body[data-screen], body[data-screen] > :first-child {
+    height: auto;
+    overflow: visible;
+    background: white;
+  }
+  [data-screen] nav, [data-screen] header, .badge-layout { display: none; }
+}
+
+[data-tool-icon] { border: 1px solid rgba(3, 77, 170, .2); }
+
+[data-screen="voting"] { touch-action: pan-y; }
+[data-poll-index] {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+[data-poll-index]::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+[data-poll-index][aria-pressed="true"]::after {
+  width: 24px;
+  left: 0;
+  background: #0062f2;
+}
+[data-purpose="bottom-controls"] button:disabled { opacity: .45; }

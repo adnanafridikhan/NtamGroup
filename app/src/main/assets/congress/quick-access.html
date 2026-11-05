@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Quick Access - Congress Tools</title><link rel="stylesheet" href="quick-access.css">
+<link rel="stylesheet" href="android.css"><script src="detail.js" defer></script>
+<style data-purpose="background-waves">
+    .bg-wave-pattern {
+      background-color: #030C25;
+      background-image: 
+        radial-gradient(circle at 100% 15%, rgba(13, 58, 140, 0.45) 0%, transparent 55%),
+        radial-gradient(circle at 0% 0%, rgba(16, 44, 98, 0.5) 0%, transparent 45%);
+      position: relative;
+    }
+    
+    .wave-line {
+      position: absolute;
+      width: 150%;
+      height: 120px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  </style>
+<style data-purpose="ui-enhancements">
+    /* Hide scrollbars for filter pill bar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-800 flex justify-center items-center min-h-screen p-0 sm:p-4 select-none" data-screen="quick-access">
+<!-- BEGIN: PhoneContainer -->
+<!-- Constrained mobile viewport device mockup -->
+<div class="w-full max-w-[375px] h-[812px] bg-wave-pattern text-white rounded-[44px] overflow-hidden shadow-2xl relative flex flex-col border-[6px] border-[#1A1E26]">
+<!-- Wave line contours in header -->
+<div class="wave-line top-[60px] -left-20 transform -rotate-12"></div>
+<div class="wave-line top-[110px] -left-10 transform -rotate-6"></div>
+<div class="wave-line top-[160px] -left-14 transform 3deg"></div>
+
+<!-- BEGIN: TopNavigationBar -->
+<header class="px-5 pt-3 pb-4 flex items-center justify-between z-20 shrink-0">
+<!-- Back Chevron Button -->
+<button aria-label="Go Back" class="w-11 h-11 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white active:scale-95 transition-transform">
+<svg class="w-5 h-5 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="text-xl font-bold text-white tracking-wide">Quick Access</h1>
+<!-- Right Menu / Grid Button -->
+<button aria-label="Grid Menu" class="w-11 h-11 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center active:scale-95 transition-transform">
+<!-- 4-Grid Golden/Yellow-tinted Icon -->
+<div class="grid grid-cols-2 gap-[3px]">
+<div class="w-1.5 h-1.5 bg-[#FAB005] rounded-[2px]"></div>
+<div class="w-1.5 h-1.5 bg-[#FAB005] rounded-[2px]"></div>
+<div class="w-1.5 h-1.5 bg-[#FAB005] rounded-[2px]"></div>
+<div class="w-1.5 h-1.5 bg-[#FAB005] rounded-[2px]"></div>
+</div>
+</button>
+</header>
+<!-- END: TopNavigationBar -->
+<!-- BEGIN: HeroBannerCard -->
+<div class="px-5 pt-1 pb-4 z-20 shrink-0">
+<div class="relative bg-gradient-to-r from-[#0c224f]/90 to-[#0e275d]/80 border border-white/15 rounded-3xl p-4 flex items-center shadow-lg backdrop-blur-sm">
+<!-- Glowing Sparkle Badge -->
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00D4FF] to-[#0055FE] shadow-icon-glow flex items-center justify-center shrink-0 mr-3.5">
+<svg class="w-7 h-7 text-white fill-current" viewbox="0 0 24 24">
+<!-- Sparkles -->
+<path d="M12 2l1.9 4.8L18 8.7l-4.1 1.9L12 15.4l-1.9-4.8L6 8.7l4.1-1.9L12 2zm6 11l.9 2.3 2.1.9-2.1.9-.9 2.3-.9-2.3-2.1-.9 2.1-.9.9-2.3zM6 14l.8 1.9 2.2.8-2.2.8-.8 1.9-.8-1.9-2.2-.8 2.2-.8.8-1.9z"></path>
+</svg>
+</div>
+<!-- Banner Text Content -->
+<div class="flex-1 pr-1">
+<h2 class="text-white font-bold text-[16px] leading-tight">Explore Congress Tools</h2>
+<p class="text-blue-200/80 text-[11px] leading-snug mt-1 font-normal">Everything you need for the full event experience</p>
+</div>
+</div>
+</div>
+<!-- END: HeroBannerCard -->
+<!-- BEGIN: MainContentSheet -->
+<!-- Curved bottom sheet container with tools & navigation -->
+<main class="flex-1 bg-white rounded-t-[34px] text-slate-800 flex flex-col overflow-hidden shadow-2xl relative z-10 mt-1">
+<!-- Upper Section: Search Bar and Filters -->
+<div class="pt-5 px-5 pb-3">
+<!-- Search Field -->
+<div class="relative flex items-center">
+<div class="absolute left-4 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4 stroke-[2.2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="w-full bg-[#FAFCFE] border border-slate-200/70 text-slate-800 placeholder-slate-400 text-[13.5px] rounded-2xl pl-11 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-accentBlue/20 focus:border-accentBlue transition-all" placeholder="Search quick access" type="text"/>
+</div>
+<!-- Filter Chips / Tabs -->
+<div class="flex items-center space-x-2.5 mt-3.5 overflow-x-auto no-scrollbar py-0.5">
+<!-- All (Active) -->
+<button class="px-5 py-1.5 rounded-full bg-accentBlue text-white text-[13px] font-semibold tracking-wide shadow-sm shrink-0">
+            All
+          </button>
+<!-- Event -->
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-slate-600 text-[13px] font-medium shrink-0 active:bg-slate-50">
+            Event
+          </button>
+<!-- Interactive -->
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-slate-600 text-[13px] font-medium shrink-0 active:bg-slate-50">
+            Interactive
+          </button>
+<!-- Tools -->
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-slate-600 text-[13px] font-medium shrink-0 active:bg-slate-50">
+            Tools
+          </button>
+</div>
+</div>
+<!-- Cards Grid Section -->
+<div class="flex-1 overflow-y-auto px-5 pt-1 pb-6 no-scrollbar">
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Card 1: Agenda -->
+<article class="bg-white border border-[#EDF1F7] rounded-3xl p-4 flex flex-col justify-between shadow-card hover:border-blue-200 transition-colors">
+<div>
+<!-- Icon Container -->
+<div data-tool-icon class="w-12 h-12 rounded-2xl bg-gradient-to-b from-[#00D0FE] to-[#0060FE] flex items-center justify-center shadow-icon-glow mb-3">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<rect height="18" rx="3" stroke-width="2" width="18" x="3" y="4"></rect>
+<line stroke-linecap="round" stroke-width="2" x1="16" x2="16" y1="2" y2="6"></line>
+<line stroke-linecap="round" stroke-width="2" x1="8" x2="8" y1="2" y2="6"></line>
+<line stroke-width="2" x1="3" x2="21" y1="10" y2="10"></line>
+<!-- Mini calendar dots -->
+<circle cx="8" cy="14" fill="currentColor" r="1"></circle>
+<circle cx="12" cy="14" fill="currentColor" r="1"></circle>
+<circle cx="16" cy="14" fill="currentColor" r="1"></circle>
+<circle cx="8" cy="18" fill="currentColor" r="1"></circle>
+<circle cx="12" cy="18" fill="currentColor" r="1"></circle>
+</svg>
+</div>
+<!-- Title and Description -->
+<h3 class="font-bold text-[#0D1D3A] text-[15px] tracking-tight">Agenda</h3>
+<p class="text-slate-500 text-[11px] leading-tight mt-1">View full congress schedule</p>
+</div>
+<!-- Footer Badge & Action Arrow -->
+<div class="flex items-center justify-between mt-4">
+<span class="bg-[#FFF8E7] text-[#8C6D1F] text-[10px] font-semibold px-2 py-0.5 rounded-md">
+                Event
+              </span>
+<button aria-label="Open Agenda" class="text-accentBlue">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</article>
+<!-- Card 2: Speakers -->
+<article class="bg-white border border-[#EDF1F7] rounded-3xl p-4 flex flex-col justify-between shadow-card hover:border-blue-200 transition-colors">
+<div>
+<!-- Icon Container -->
+<div data-tool-icon class="w-12 h-12 rounded-2xl bg-gradient-to-b from-[#00D0FE] to-[#0060FE] flex items-center justify-center shadow-icon-glow mb-3">
+<svg class="w-6 h-6 text-white fill-current" viewbox="0 0 24 24">
+<path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+</svg>
+</div>
+<!-- Title and Description -->
+<h3 class="font-bold text-[#0D1D3A] text-[15px] tracking-tight">Speakers</h3>
+<p class="text-slate-500 text-[11px] leading-tight mt-1">Explore global medical experts</p>
+</div>
+<!-- Footer Badge & Action Arrow -->
+<div class="flex items-center justify-between mt-4">
+<span class="bg-[#FFF8E7] text-[#8C6D1F] text-[10px] font-semibold px-2 py-0.5 rounded-md">
+                Event
+              </span>
+<button aria-label="Open Speakers" class="text-accentBlue">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</article>
+<!-- Card 3: Name Tag -->
+<article class="bg-white border border-[#EDF1F7] rounded-3xl p-4 flex flex-col justify-between shadow-card hover:border-blue-200 transition-colors">
+<div>
+<!-- Icon Container -->
+<div data-tool-icon class="w-12 h-12 rounded-2xl bg-gradient-to-b from-[#00D0FE] to-[#0060FE] flex items-center justify-center shadow-icon-glow mb-3">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<rect height="13" rx="2" stroke-width="2" width="18" x="3" y="7"></rect>
+<path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke-width="2"></path>
+<circle cx="9" cy="13" r="1.5" stroke-width="2"></circle>
+<line stroke-linecap="round" stroke-width="2" x1="13" x2="17" y1="12" y2="12"></line>
+<line stroke-linecap="round" stroke-width="2" x1="13" x2="16" y1="15" y2="15"></line>
+</svg>
+</div>
+<!-- Title and Description -->
+<h3 class="font-bold text-[#0D1D3A] text-[15px] tracking-tight">Name Tag</h3>
+<p class="text-slate-500 text-[11px] leading-tight mt-1">Access your digital badge</p>
+</div>
+<!-- Footer Badge & Action Arrow -->
+<div class="flex items-center justify-end mt-4">
+<button aria-label="Open Name Tag" class="text-accentBlue">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</article>
+<!-- Card 4: Venue -->
+<article class="bg-white border border-[#EDF1F7] rounded-3xl p-4 flex flex-col justify-between shadow-card hover:border-blue-200 transition-colors">
+<div>
+<!-- Icon Container -->
+<div data-tool-icon class="w-12 h-12 rounded-2xl bg-gradient-to-b from-[#00D0FE] to-[#0060FE] flex items-center justify-center shadow-icon-glow mb-3">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Title and Description -->
+<h3 class="font-bold text-[#0D1D3A] text-[15px] tracking-tight">Venue</h3>
+<p class="text-slate-500 text-[11px] leading-tight mt-1">Location, facilities and directions</p>
+</div>
+<!-- Footer Badge & Action Arrow -->
+<div class="flex items-center justify-end mt-4">
+<button aria-label="Open Venue" class="text-accentBlue">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</article>
+</div>
+</div>
+
+</main>
+<!-- END: MainContentSheet -->
+</div>
+<!-- END: PhoneContainer -->
+</body></html>

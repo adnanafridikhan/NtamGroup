@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Nestlé Congress Ask Q&amp;A</title><link rel="stylesheet" href="ask-qa.css">
+<link rel="stylesheet" href="android.css"><script src="detail.js" defer></script>
+<style data-purpose="base-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Hide scrollbar for clean horizontal scrolling */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style data-purpose="background-waves">
+    /* Subtle decorative curved background lines inside dark header */
+    .bg-wave-lines {
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(30, 80, 160, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 0% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 45%);
+    }
+    .header-border-glass {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-0 sm:p-4 text-slate-800" data-screen="ask-qa">
+<!-- BEGIN: Mobile Device Container -->
+<div class="w-full max-w-[400px] h-[100dvh] sm:h-[860px] bg-brand-navy rounded-none sm:rounded-[48px] overflow-hidden shadow-2xl relative flex flex-col border-0 sm:border-[8px] sm:border-slate-800">
+
+<!-- BEGIN: Header Content -->
+<div class="px-5 pt-3 pb-6 bg-brand-navy bg-wave-lines shrink-0 relative">
+<!-- App Bar Navigation -->
+<nav aria-label="Main Navigation" class="flex items-center justify-between mb-5">
+<!-- Back Button -->
+<button aria-label="Go back" class="w-10 h-10 rounded-full bg-white/10 header-border-glass flex items-center justify-center text-white active:scale-95 transition">
+<svg class="w-5 h-5 text-white stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="text-xl font-bold text-white tracking-wide">Ask Q&amp;A</h1>
+<!-- Header Action Button (Chat Icon) -->
+<button aria-label="Open chat discussions" class="w-10 h-10 rounded-full bg-white/10 header-border-glass flex items-center justify-center active:scale-95 transition">
+<svg class="w-5 h-5 text-brand-amber fill-brand-amber" viewbox="0 0 24 24">
+<path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
+</svg>
+</button>
+</nav>
+<!-- Banner: "Ask the Experts" Card -->
+<div class="w-full bg-white/10 header-border-glass rounded-2xl p-4 flex items-center gap-3.5 shadow-lg">
+<!-- Icon Container -->
+<div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#0080ff] to-[#00d2ff] flex items-center justify-center shrink-0 shadow-md">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- Banner Text Content -->
+<div class="flex-1 min-w-0">
+<h2 class="text-base font-bold text-white leading-snug">Ask the Experts</h2>
+<p class="text-xs text-blue-100/70 font-normal leading-normal mt-0.5 truncate">
+            Submit your questions and vote for top discussions
+          </p>
+</div>
+</div>
+</div>
+<!-- END: Header Content -->
+<!-- BEGIN: Main White Content Card -->
+<main class="flex-1 bg-white rounded-t-[34px] overflow-y-auto px-5 pt-6 pb-8 flex flex-col no-scrollbar shadow-inner">
+<!-- Section: Question Input Form -->
+<section class="space-y-4 shrink-0" data-purpose="question-input-form">
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Write your question</h2>
+<!-- Input Field Container -->
+<div class="relative">
+<input class="w-full h-14 bg-[#f4f7fb] border-none rounded-2xl px-4 text-sm text-slate-700 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all shadow-sm" placeholder="Type your question for the speaker..." type="text"/>
+</div>
+<!-- Topic Badges Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-1">
+<!-- Active Pill: General -->
+<button class="bg-[#0052cc] text-white text-xs font-semibold px-4 py-2 rounded-full whitespace-nowrap shadow-sm active:scale-95 transition">
+            General
+          </button>
+<!-- Inactive Pill: Nutrition -->
+<button class="bg-[#f1f5f9] text-slate-600 hover:bg-slate-200 text-xs font-medium px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition">
+            Nutrition
+          </button>
+<!-- Inactive Pill: Research -->
+<button class="bg-[#f1f5f9] text-slate-600 hover:bg-slate-200 text-xs font-medium px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition">
+            Research
+          </button>
+<!-- Inactive Pill: Clinical -->
+<button class="bg-[#f1f5f9] text-slate-600 hover:bg-slate-200 text-xs font-medium px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition">
+            Clinical
+          </button>
+</div>
+<!-- Submit Button CTA -->
+<button class="w-full h-[52px] bg-gradient-to-r from-[#00b4d8] to-[#0052cc] hover:opacity-95 text-white font-bold text-sm rounded-2xl flex items-center justify-center gap-2 shadow-btn-glow active:scale-[0.98] transition">
+<!-- Paper Airplane Send Icon -->
+<svg class="w-4 h-4 fill-white -rotate-12 translate-y-[-1px]" viewbox="0 0 24 24">
+<path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+</svg>
+<span>Submit Question</span>
+</button>
+</section>
+<!-- Section: Filter & Segmented Control -->
+<section class="mt-6 mb-4 shrink-0" data-purpose="filter-tabs">
+<div class="flex items-center justify-between gap-3">
+<!-- Filter: Popular -->
+<button class="flex-1 py-2 rounded-xl bg-[#f8fafc] hover:bg-slate-100 text-xs font-semibold text-slate-600 border border-slate-100 shadow-xs transition">
+            Popular
+          </button>
+<!-- Filter: Recent (Active) -->
+<button class="flex-1 py-2 rounded-xl bg-[#fdbb43] text-xs font-bold text-slate-900 shadow-sm transition">
+            Recent
+          </button>
+<!-- Filter: Answered -->
+<button class="flex-1 py-2 rounded-xl bg-[#f8fafc] hover:bg-slate-100 text-xs font-semibold text-slate-600 border border-slate-100 shadow-xs transition">
+            Answered
+          </button>
+</div>
+</section>
+<!-- Section: Questions List -->
+<section class="space-y-4" data-purpose="questions-feed">
+<!-- Question Card 1 -->
+<article class="bg-white border border-amber-200/70 rounded-2xl p-4 shadow-sm relative">
+<div class="flex items-start gap-3">
+<!-- Left: Upvote Pill Widget -->
+<button aria-label="Upvote question" class="w-11 bg-slate-50 border border-slate-100 rounded-xl py-2 flex flex-col items-center justify-center shrink-0 hover:bg-slate-100 transition active:scale-95">
+<svg class="w-3.5 h-3.5 text-slate-500 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-xs font-extrabold text-slate-800 mt-1">24</span>
+</button>
+<!-- Right: Question Details -->
+<div class="flex-1">
+<!-- Category Badges -->
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-blue-50 text-blue-600 border border-blue-100">
+                  Nutrition
+                </span>
+<span class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-800 border border-amber-200">
+                  Answered
+                </span>
+</div>
+<!-- Question Title / Body -->
+<h3 class="text-[13px] font-bold text-brand-deepNavy leading-snug tracking-tight">
+                How can pediatric nutrition plans be personalized for children with different growth patterns?
+              </h3>
+<!-- Author & Action Footer -->
+<div class="flex items-center justify-between mt-3 pt-1 border-t border-slate-50">
+<!-- Author Info -->
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 text-[10px] font-bold flex items-center justify-center">
+                    D
+                  </div>
+<span class="text-xs font-medium text-slate-500">Dr. Ahmed</span>
+</div>
+<!-- Reply Button -->
+<button class="flex items-center gap-1 text-slate-500 hover:text-slate-800 text-xs font-semibold active:scale-95 transition">
+<svg class="w-3.5 h-3.5 -scale-x-100" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M3 10h10a5 5 0 015 5v2m0 0l-4-4m4 4l4-4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Reply</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- END: Questions List -->
+</main>
+<!-- END: Main White Content Card -->
+
+</div>
+<!-- END: Mobile Device Container -->
+</body></html>

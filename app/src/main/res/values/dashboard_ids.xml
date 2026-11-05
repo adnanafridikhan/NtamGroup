@@ -1,0 +1,4 @@
+<resources>
+    <item name="dashboard_tabs" type="id" />
+    <item name="dashboard_home" type="id" />
+</resources>

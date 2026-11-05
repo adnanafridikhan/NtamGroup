@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Speakers - Medical Congress</title><link rel="stylesheet" href="speakers.css">
+<link rel="stylesheet" href="android.css"><script src="detail.js" defer></script>
+<style data-purpose="custom-layout-decorations">
+    /* Subtle decorative curved background lines */
+    .bg-topo-pattern {
+      background-image: 
+        radial-gradient(circle at 80% 10%, rgba(20, 80, 180, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 10% 25%, rgba(0, 210, 255, 0.12) 0%, transparent 50%);
+    }
+
+    /* Fine dot pattern overlay */
+    .dot-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Featured card border glow */
+    .featured-card-border {
+      border: 1.5px solid #fde68a;
+      box-shadow: 0 4px 20px -2px rgba(245, 158, 11, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Regular card shadow */
+    .regular-card-shadow {
+      border: 1px solid #eef2f6;
+      box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    /* Smooth horizontal chip scrolling */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#030b1c] text-slate-800 antialiased flex justify-center min-h-screen" data-screen="speakers">
+<!-- Mobile Screen Canvas (iPhone 14 / 15 standard frame) -->
+<div class="w-full max-w-[420px] min-h-screen bg-[#06132d] flex flex-col relative overflow-hidden shadow-2xl">
+<!-- Top Glow & Grid Texture -->
+<div class="absolute inset-0 h-96 bg-topo-pattern pointer-events-none"></div>
+<div class="absolute inset-0 h-72 dot-pattern opacity-60 pointer-events-none"></div>
+
+<!-- BEGIN: Top Navigation Bar -->
+<nav aria-label="Main Navigation" class="relative z-10 px-5 pt-3 pb-4 flex items-center justify-between">
+<!-- Back Button -->
+<button aria-label="Go back" class="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white active:scale-95 transition-transform" type="button">
+<svg class="w-5 h-5 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.75 19.5L8.25 12l7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="text-xl font-bold text-white tracking-wide">Speakers</h1>
+<!-- Star / Favorites Button -->
+<button aria-label="Favorites" class="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-amber-300 active:scale-95 transition-transform" type="button">
+<svg class="w-5 h-5 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</nav>
+<!-- END: Top Navigation Bar -->
+<!-- BEGIN: Banner Card -->
+<section class="relative z-10 px-5 pb-5">
+<div class="w-full bg-[#0a2352]/70 backdrop-blur-xl border border-white/15 rounded-3xl p-4 flex items-center space-x-4 shadow-xl">
+<!-- Team/People Icon with vibrant cyan gradient -->
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#0284c7] via-[#0ea5e9] to-[#38bdf8] flex items-center justify-center shadow-lg shadow-sky-500/20 shrink-0">
+<svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24">
+<path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.75h-14.25v-.75zM14.25 19.875a5.625 5.625 0 00-4.05-5.394 8.625 8.625 0 014.05-.981 7.125 7.125 0 017.125 7.125v.75h-7.125v-1.5z"></path>
+</svg>
+</div>
+<!-- Banner Text -->
+<div class="flex-1 pr-1">
+<h2 class="text-white font-bold text-base leading-snug">Global Medical Experts</h2>
+<p class="text-sky-200/80 text-xs font-normal mt-0.5 leading-relaxed">Meet speakers from nutrition, research and healthcare</p>
+</div>
+</div>
+</section>
+<!-- END: Banner Card -->
+<!-- BEGIN: Main White Content Sheet -->
+<main class="flex-1 bg-white rounded-t-[34px] px-5 pt-5 pb-8 flex flex-col relative z-20 shadow-2xl">
+<!-- Search Input & Filter Button -->
+<section aria-label="Search speakers" class="mb-4">
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4 stroke-[2.2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="w-full pl-10 pr-11 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all shadow-sm" placeholder="Search speakers" type="text"/>
+<!-- Filter Sliders Button -->
+<button aria-label="Open filter settings" class="absolute right-3 text-blue-600 hover:text-blue-700 active:scale-95 transition-transform" type="button">
+<svg class="w-5 h-5 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</section>
+<!-- Category Filter Pills (Horizontal Scroll) -->
+<section aria-label="Categories" class="mb-4">
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5">
+<!-- All (Selected) -->
+<button class="bg-[#0b5cdd] text-white px-5 py-2 rounded-full text-xs font-bold shrink-0 shadow-sm shadow-blue-500/25" type="button">
+            All
+          </button>
+<!-- Nutrition -->
+<button class="bg-white text-slate-600 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold shrink-0 hover:bg-slate-50 transition-colors" type="button">
+            Nutrition
+          </button>
+<!-- Research -->
+<button class="bg-white text-slate-600 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold shrink-0 hover:bg-slate-50 transition-colors" type="button">
+            Research
+          </button>
+<!-- Pediatrics -->
+<button class="bg-white text-slate-600 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold shrink-0 hover:bg-slate-50 transition-colors" type="button">
+            Pediatrics
+          </button>
+</div>
+</section>
+<!-- Speaker Cards List -->
+<section aria-label="Speaker directory" class="space-y-3.5 flex-1 overflow-y-auto no-scrollbar pb-6">
+<!-- BEGIN: Featured Speaker Card (Dr. Sarah Johnson) -->
+<article class="bg-white rounded-3xl p-4 featured-card-border relative">
+<!-- Featured Tag -->
+<div class="mb-2">
+<span class="text-[10px] font-extrabold tracking-wider text-amber-500 uppercase">Featured Speaker</span>
+</div>
+<!-- Card Content Body -->
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3.5">
+<!-- Avatar with Ring -->
+<div class="w-14 h-14 rounded-full p-[2.5px] bg-gradient-to-tr from-amber-300 via-teal-300 to-sky-400 shrink-0">
+<div class="w-full h-full bg-[#f1f6ff] rounded-full flex items-center justify-center">
+<span class="text-blue-900 font-extrabold text-base tracking-tight">SJ</span>
+</div>
+</div>
+<!-- Speaker Details -->
+<div>
+<h3 class="font-bold text-[#0c2340] text-sm leading-tight">Dr. Sarah Johnson</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 font-medium leading-tight">Pediatric Nutrition Specialist</p>
+<div class="flex items-center text-[10px] text-slate-400 mt-1 font-normal">
+<svg class="w-3 h-3 text-slate-400 mr-1 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>United Kingdom</span>
+</div>
+</div>
+</div>
+<!-- Favorite Star & Details Arrow -->
+<div class="flex flex-col items-center justify-between h-14 pl-1">
+<button aria-label="Favorited" class="text-amber-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+</svg>
+</button>
+<button aria-label="View profile" class="text-slate-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Presentation Topic Badge -->
+<div class="mt-3">
+<span class="inline-block bg-[#edf3ff] text-[#0d5fe8] text-[10px] font-bold px-3 py-1 rounded-full">
+              Future of Pediatric Nutrition
+            </span>
+</div>
+</article>
+<!-- END: Featured Speaker Card -->
+<!-- BEGIN: Regular Speaker Card 1 (Dr. Hassan Ali) -->
+<article class="bg-white rounded-3xl p-4 regular-card-shadow relative">
+<!-- Role Tag -->
+<div class="mb-2">
+<span class="text-[10px] font-extrabold tracking-wider text-blue-600 uppercase">Speaker</span>
+</div>
+<!-- Card Content Body -->
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3.5">
+<!-- Avatar with Ring -->
+<div class="w-14 h-14 rounded-full p-[2.5px] bg-gradient-to-tr from-sky-300 to-blue-500 shrink-0">
+<div class="w-full h-full bg-[#f1f6ff] rounded-full flex items-center justify-center">
+<span class="text-blue-900 font-extrabold text-base tracking-tight">HA</span>
+</div>
+</div>
+<!-- Speaker Details -->
+<div>
+<h3 class="font-bold text-[#0c2340] text-sm leading-tight">Dr. Hassan Ali</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 font-medium leading-tight">Clinical Research Director</p>
+<div class="flex items-center text-[10px] text-slate-400 mt-1 font-normal">
+<svg class="w-3 h-3 text-slate-400 mr-1 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>UAE</span>
+</div>
+</div>
+</div>
+<!-- Outline Star & Details Arrow -->
+<div class="flex flex-col items-center justify-between h-14 pl-1">
+<button aria-label="Add to favorites" class="text-slate-300 hover:text-amber-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button aria-label="View profile" class="text-slate-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Presentation Topic Badge -->
+<div class="mt-3">
+<span class="inline-block bg-[#edf3ff] text-[#0d5fe8] text-[10px] font-bold px-3 py-1 rounded-full">
+              Welcome &amp; Introduction
+            </span>
+</div>
+</article>
+<!-- END: Regular Speaker Card 1 -->
+<!-- BEGIN: Regular Speaker Card 2 (Dr. Ahmed Khalid) -->
+<article class="bg-white rounded-3xl p-4 regular-card-shadow opacity-95">
+<!-- Role Tag -->
+<div class="mb-2">
+<span class="text-[10px] font-extrabold tracking-wider text-blue-600 uppercase">Speaker</span>
+</div>
+<!-- Card Content Body -->
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3.5">
+<!-- Avatar with Ring -->
+<div class="w-14 h-14 rounded-full p-[2.5px] bg-gradient-to-tr from-sky-400 to-indigo-500 shrink-0">
+<div class="w-full h-full bg-[#f1f6ff] rounded-full flex items-center justify-center">
+<span class="text-blue-900 font-extrabold text-base tracking-tight">AK</span>
+</div>
+</div>
+<!-- Speaker Details -->
+<div>
+<h3 class="font-bold text-[#0c2340] text-sm leading-tight">Dr. Ahmed Khalid</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 font-medium leading-tight">Head of Clinical Nutrition</p>
+<div class="flex items-center text-[10px] text-slate-400 mt-1 font-normal">
+<svg class="w-3 h-3 text-slate-400 mr-1 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Saudi Arabia</span>
+</div>
+</div>
+</div>
+<!-- Outline Star & Details Arrow -->
+<div class="flex flex-col items-center justify-between h-14 pl-1">
+<button aria-label="Add to favorites" class="text-slate-300 hover:text-amber-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button aria-label="View profile" class="text-slate-400 focus:outline-none" type="button">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+<!-- END: Regular Speaker Card 2 -->
+</section>
+</main>
+<!-- END: Main White Content Sheet -->
+
+</div>
+</body></html>
